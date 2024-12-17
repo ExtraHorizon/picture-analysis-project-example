@@ -11,6 +11,7 @@ export default function CameraScreen() {
   const [facing, _setFacing] = useState<CameraType>('back');
   const [permission, requestPermission] = useCameraPermissions();
   const { exh } = useExtraHorizon();
+
   const uploadPhotoMutation = useMutation({
     mutationFn: async (uri: string) => {
       const { tokens } = await exh.files.create(
@@ -34,22 +35,26 @@ export default function CameraScreen() {
       console.error('An error occurred:', e);
     },
   });
+
   if (!permission || !exh) {
     // Camera permissions are still loading.
     return <View />;
   }
+
   if (!permission.granted) {
     // Camera permissions are not granted yet.
     return (
       <Button onPress={requestPermission} title="grant permission" />
     );
   }
+
   async function handleTakePhoto() {
     if (!cameraRef.current) return;
     const photo = await cameraRef.current.takePictureAsync();
     if (!photo) return;
     uploadPhotoMutation.mutate(photo.uri);
   }
+  
   return (
     <SafeAreaView className='flex-1 w-full h-full' edges={['top', 'bottom']}>
       <CameraView ref={cameraRef} style={{ flex: 1 }} facing={facing}>
