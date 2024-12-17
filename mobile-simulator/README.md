@@ -1,5 +1,5 @@
 # Mobile Simulator
-This is a simple script that simulates the [mobile application](mobile-application/README.md) sending a picture to ExH.
+This is a simple script that simulates the [mobile application](mobile-application/README.md) sending a picture to Extra Horizon.
 
 ## Instructions
 1. Install the dependencies for the script

@@ -12,6 +12,7 @@ It contains the bare minimal code required to show case what's needed to get sta
 - The task uses a template to create a report.
 - The task uploads the report to the File Service.
 - The task updates the Data Service with the report reference.
+- A web app displays the measurements and links to the pictures and reports.
 
 # Instructions
 
