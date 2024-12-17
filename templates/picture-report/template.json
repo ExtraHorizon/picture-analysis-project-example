@@ -1,0 +1,12 @@
+{
+  "description": "Report of a picture measurement",
+  "schema": {
+    "type": "object",
+    "fields": {
+      "pictureUrl": {
+        "type": "string"
+      }
+    }
+  },
+  "fields": {}
+}

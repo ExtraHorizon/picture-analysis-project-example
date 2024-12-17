@@ -1,0 +1,10 @@
+{
+    "name": "analyze-picture",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "dependencies": {
+        "@extrahorizon/javascript-sdk": "^8.4.1"
+    }
+}

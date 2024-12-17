@@ -1,0 +1,10 @@
+{
+  "name": "wearable-simulator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@extrahorizon/javascript-sdk": "^8.4.1",
+    "dotenv": "^16.4.5"
+  }
+}
